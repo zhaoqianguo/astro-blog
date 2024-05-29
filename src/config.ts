@@ -1,12 +1,12 @@
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
-  website: "https://4ark.me",
-  author: "4Ark",
+  website: "",
+  author: "大西瓜crown",
   desc: "Art and beauty can be created on a computer.",
-  title: "4Ark",
+  title: "大西瓜crown",
   lightAndDarkMode: true,
-  postPerPage: 6,
+  postPerPage: 10,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
 };
 
@@ -25,25 +25,25 @@ export const LOGO_IMAGE = {
 export const SOCIALS: SocialObjects = [
   {
     name: "Github",
-    href: "https://github.com/gd4Ark",
+    href: "https://github.com/",
     linkTitle: ` ${SITE.title} on Github`,
     active: true,
   },
   {
     name: "Mail",
-    href: "mailto:gd4ark@gmail.com",
+    href: "z844851879@gmail.com",
     linkTitle: `Send an email to ${SITE.title}`,
     active: true,
   },
   {
     name: "Twitter",
-    href: "https://twitter.com/gd4Ark",
+    href: "https://twitter.com/",
     linkTitle: `${SITE.title} on Twitter`,
     active: true,
   },
   {
     name: "RSS",
-    href: "https://4ark.me/rss.xml",
+    href: "",
     linkTitle: `${SITE.title} on RSS`,
     active: true,
   },

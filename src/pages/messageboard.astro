@@ -1,0 +1,46 @@
+---
+import { SITE } from "@config";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Breadcrumbs from "@components/Breadcrumbs.astro";
+import Giscus from "@components/Giscus.astro";
+
+// 和 GitHub 上的仓库保持一致，评论落在 Discussions 里
+const GISCUS = {
+  repo: "zhaoqianguo/astro-blog",
+  repoId: "R_kgDOMCMV7Q",
+  categoryId: "DIC_kwDOMCMV7c4DLPN_",
+};
+---
+
+<Layout
+  title={`留言板 | ${SITE.title}`}
+  description="想说什么都行，指出错误更好"
+>
+  <Header />
+  <Breadcrumbs />
+  <main id="main-content">
+    <h1>留言板</h1>
+    <p>没什么正经主题，想说什么都行。</p>
+    <p>说说你是从哪篇文章找过来的，或者指出我哪里写错了——写错的地方我最想听。</p>
+    <Giscus
+      repo={GISCUS.repo}
+      repoId={GISCUS.repoId}
+      categoryId={GISCUS.categoryId}
+    />
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  #main-content {
+    @apply mx-auto w-full max-w-3xl px-4 pb-4;
+  }
+  #main-content h1 {
+    @apply text-2xl font-semibold sm:text-3xl;
+  }
+  #main-content p {
+    @apply mb-4 mt-2;
+  }
+</style>

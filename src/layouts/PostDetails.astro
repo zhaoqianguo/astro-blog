@@ -7,7 +7,7 @@ import Datetime from "@components/Datetime";
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
-import Disqus from "@components/Disqus.astro";
+import Giscus from "@components/Giscus.astro";
 import TOC from "@components/Toc.astro";
 import { SITE } from "@config";
 
@@ -110,7 +110,14 @@ const layoutProps = {
       <ShareLinks />
     </div>
 
-    <Disqus />
+    <div class="mt-12">
+      <h2 class="text-lg font-semibold">评论</h2>
+      <Giscus
+        repo="zhaoqianguo/astro-blog"
+        repoId="R_kgDOMCMV7Q"
+        categoryId="DIC_kwDOMCMV7c4DLPN_"
+      />
+    </div>
   </main>
   <Footer />
 </Layout>
